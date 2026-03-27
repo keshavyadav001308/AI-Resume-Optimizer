@@ -1,0 +1,101 @@
+# AI Resume Optimizer
+
+An intelligent **AI-powered Resume Optimization System** built using **LangGraph + LLM (Groq)** that improves resumes based on job descriptions using an iterative feedback loop.
+
+---
+
+## Project Overview
+
+This system analyzes a resume against a given job description, calculates an **ATS (Applicant Tracking System) score**, and improves the resume iteratively until it reaches a high-quality threshold.
+
+---
+
+## 🔁 Workflow
+
+```text
+Resume (PDF)
+     ↓
+Text Extraction
+     ↓
+ATS Evaluation
+     ↓
+ ┌───────────────┐
+ ↓               ↓
+Score ≥ 90     Score < 90
+ ↓               ↓
+ END        Improve Resume
+                  ↓
+            Re-evaluate 🔁
+```
+
+---
+
+## ⚙️ Tech Stack
+
+* Python 🐍
+* LangGraph (workflow orchestration)
+* LangChain
+* Groq LLM (LLaMA 3.1)
+* pdfplumber (PDF text extraction)
+* python-dotenv
+
+ Features
+
+* 📄 Resume upload (PDF parsing)
+* 🧠 Job Description Matching
+* 📊 ATS Score Evaluation
+* 🔍 Keyword Injection System
+* 🔁 Iterative Resume Improvement (max 3 loops)
+* 📈 Confidence Score Prediction
+* ⚡ Conditional AI workflow using LangGraph
+
+---
+
+## 📂 Project Structure
+
+```text
+AI-Resume-Optimizer/
+│
+├── main.py
+├── requirements.txt
+└── README.md
+
+
+
+
+ Example Input
+
+* Resume: PDF file
+* Job Description:
+
+  > Data Scientist with Python, Machine Learning, SQL, Pandas
+
+ Example Output
+
+* ATS Score: 85 → 92
+* Improved Resume Content
+* Suggestions for improvement
+* Confidence Level: High
+
+ Key Concepts Used
+
+* State-based workflow (LangGraph)
+* Conditional routing
+* Iterative AI refinement loop
+* Prompt engineering
+* Text extraction from PDFs
+
+Disclaimer
+
+> This tool is for educational and assistance purposes only.
+> It does not guarantee job selection or ATS accuracy.
+
+ Future Improvements
+
+* Section-wise scoring (Skills, Experience, Projects)
+* Resume download as formatted PDF
+* Integration with job portals
+* Multi-job comparison
+* Advanced NLP scoring
+
+
