@@ -1,0 +1,5 @@
+langgraph
+langchain
+langchain-groq
+pdfplumber
+python-dotenv
